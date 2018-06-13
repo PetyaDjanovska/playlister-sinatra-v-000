@@ -36,6 +36,7 @@ class SongsController < ApplicationController
       @artist = Artist.find_or_create_by(name: params['artist_name'])
     else
       @artist= @song.artist
+    end
     @song.artist = @artist
     @artist.songs << @song
     @song.genres << Genre.find(params['genres'])
