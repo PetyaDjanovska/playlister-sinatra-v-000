@@ -37,6 +37,7 @@ class SongsController < ApplicationController
     else
       @artist= @song.artist
     end
+    binding.pry
     @song.artist = @artist
     @artist.songs << @song
     @song.genres << Genre.find(params['genres'])
