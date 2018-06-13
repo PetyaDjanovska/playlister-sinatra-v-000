@@ -25,7 +25,7 @@ class SongsController < ApplicationController
      @song = Song.find_by_slug(params[:slug])
      @artist = @song.artist
      @genres = Genre.all
-     binding.pry
+    #  binding.pry
      erb :'/songs/show'
   end
 
